@@ -1,0 +1,40 @@
+<main>  
+    <form [formGroup] = "settingsForm" (ngSubmit)="onSubmit(settingsForm.value)">
+        <h1>Dane sprzedawcy</h1>
+        <div class="form-group row">
+            <label for="invId" class="col-4 col-form-label" >Nazwa sprzedawcy</label> 
+            <div class="col-8">
+                <input id="invId" name="invId" type="text" class="form-control"  formControlName="sellerName">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="date" class="col-4 col-form-label">Adres 1 linijka</label> 
+            <div class="col-8">
+                <input id="date" name="date" type="text" class="form-control" formControlName="address1">
+            </div>
+        </div> 
+        <div class="form-group row">
+                <label for="date" class="col-4 col-form-label">Adres 2 linijka</label> 
+                <div class="col-8">
+                    <input id="date" name="date" type="text" class="form-control" formControlName="address2">
+                </div>
+            </div> 
+        <div class="form-group row">
+            <label for="date" class="col-4 col-form-label">NIP</label> 
+            <div class="col-8">
+                <input id="date" name="date" type="text" class="form-control" formControlName="nipNumber">
+            </div>
+        </div> 
+        <div class="form-group row">
+            <label for="date" class="col-4 col-form-label">Osoba upoważniona do wystawienia</label> 
+            <div class="col-8">
+                <input id="date" name="date" type="text" class="form-control" formControlName="personName">
+            </div>
+        </div>         
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button type="submit" >Zapisz ustawienia</button>
+            </div>
+        </div>
+    </form>
+</main>

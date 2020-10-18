@@ -1,0 +1,81 @@
+<main>   
+  <form [formGroup] = "checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <h1>Dane faktury</h1>
+    <div class="form-group row">
+        <label for="invId" class="col-4 col-form-label" >Nr faktury</label> 
+        <div class="col-8">
+          <input id="invId" name="invId" type="text" class="form-control"  formControlName="invoiceNumber">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="city" class="col-4 col-form-label">Miasto</label> 
+        <div class="col-8">
+          <input id="city" name="city" type="text" class="form-control" formControlName="city">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="date" class="col-4 col-form-label">Data</label> 
+        <div class="col-8">
+          <input id="date" name="date" type="text" class="form-control" formControlName="date">
+        </div>
+    </div> 
+
+    <h1>Dane płatnika</h1>
+    <div class="form-group row">
+        <label for="name" class="col-4 col-form-label">Nazwa firmy</label> 
+        <div class="col-8">
+          <input id="name" name="name" type="text" class="form-control" formControlName="companyName">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="address" class="col-4 col-form-label">Adres 1 linijka</label> 
+        <div class="col-8">
+          <input id="address" name="address" type="text" class="form-control" formControlName="companyAddress1">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="address" class="col-4 col-form-label">Adres 2 linijka</label> 
+        <div class="col-8">
+          <input id="address" name="address" type="text" class="form-control" formControlName="companyAddress2">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="nipNumber" class="col-4 col-form-label">NIP</label> 
+        <div class="col-8">
+          <input id="nipNumber" name="nipNumber" type="text" class="form-control" formControlName="companyNip">
+        </div>
+    </div> 
+
+    <h1>Dane zamówienia</h1>
+    <div class="form-group row">
+        <label for="item" class="col-4 col-form-label">Nazwa przedmiotu</label> 
+        <div class="col-8">
+          <input id="item" name="item" type="text" class="form-control" formControlName="itemName">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="quantity" class="col-4 col-form-label">Ilość</label> 
+        <div class="col-8">
+          <input id="quantity" name="quantity" type="text" class="form-control" formControlName="itemQuantity">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="price" class="col-4 col-form-label">Cena</label> 
+        <div class="col-8">
+          <input id="price" name="price" type="text" class="form-control" formControlName="itemPrice">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="taxRate" class="col-4 col-form-label">Podatek</label> 
+        <div class="col-8">
+          <input id="taxRate" name="taxRate" type="text" class="form-control" formControlName="itemTaxRate">
+        </div>
+    </div> 
+
+    <div class="form-group row">
+      <div class="offset-4 col-8">
+          <button type="submit" >Stwórz fakturę</button>
+        </div>
+    </div>
+  </form>
+</main>
